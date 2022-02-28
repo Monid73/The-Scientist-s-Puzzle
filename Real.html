@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>НЕИЗВЕСТНЫЙ ПОЛЬЗОВАТЕЛЬ</title>
+</head>
+<body class="background" style="background-color: gray;">
+	<!-- Начало квадрата -->
+	<div class="main">
+	<!-- Первый ряд -->
+			<div class="row">
+				<div class="d-flex">
+				<div class="block FirstProtocol" style="background-color: yellow;" onclick="Name()"></div>
+				<div class="number-block" style="background: #DC2D34; color: black;">A</div>
+				<div class="number-block" style="background: #9A2126; color: black;">B</div>
+				<div class="number-block" style="background: #6B0D11; color: black;">C</div>
+				<div class="number-block" style="background: #4A1C1E; color: black;">D</div>
+				<div class="number-block" style="background: #C1000B; color: black;">E</div>
+				<div class="number-block" style="background: #B71E26; color: black;">F</div>
+				<div class="block SecondProtocol" style="background-color: yellow;" onclick="DateOfBirth()"></div>
+				</div>
+			</div>
+	<!-- Конец первого ряда -->
+
+	<!-- Второй ряд -->
+			<div class="row">
+				<div class="d-flex">
+				<div class="number-block">1</div>
+				<div class="block Wrong"></div> <!--1A-->
+				<div class="block Wrong"></div> <!--1B-->
+				<div class="block Wrong"></div> <!--1C-->
+				<div class="block Wrong"></div> <!--1D-->
+				<div class="block Wrong"></div> <!--1E-->
+				<div class="block H"></div> <!--1F-->
+				<div class="number-block">1</div>
+				</div>
+			</div>
+	<!-- Конец второго ряда -->
+
+	<!-- Третий ряд -->
+			<div class="row">
+				<div class="d-flex">
+				<div class="number-block">2</div>
+				<div class="block Wrong"></div> <!--2A-->
+				<div class="block Wrong"></div> <!--2B-->
+				<div class="block Wrong"></div> <!--2C-->
+				<div class="block Wrong"></div> <!--2D-->
+				<div class="block N"></div> <!--2E-->
+				<div class="block Wrong"></div> <!--2F-->
+				<div class="number-block">2</div>
+				</div>
+			</div>
+	<!-- Конец третьего ряда -->
+
+	<!-- Четвёртый ряд -->
+			<div class="row">
+				<div class="d-flex">
+				<div class="number-block">3</div>
+				<div class="block K"></div> <!--3A-->
+				<div class="block Wrong"></div> <!--3B-->
+				<div class="block Wrong"></div> <!--3C-->
+				<div class="block Wrong"></div> <!--3D-->
+				<div class="block Wrong"></div> <!--3E-->
+				<div class="block Wrong"></div> <!--3F-->
+				<div class="number-block">3</div>
+				</div>
+			</div>
+	<!-- Конец четвёртого ряда -->
+
+	<!-- Пятый ряд -->
+			<div class="row">
+				<div class="d-flex">
+				<div class="number-block">4</div>
+				<div class="block Wrong"></div> <!--4A-->
+				<div class="block A"></div> <!--4B-->
+				<div class="block Wrong"></div> <!--4C-->
+				<div class="block Wrong"></div> <!--4D-->
+				<div class="block Wrong"></div> <!--4E-->
+				<div class="block Wrong"></div> <!--4F-->
+				<div class="number-block">4</div>
+				</div>
+			</div>
+	<!-- Конец пятого ряда -->
+
+	<!-- Шестой ряд -->
+			<div class="row">
+				<div class="d-flex">
+				<div class="number-block">5</div>
+				<div class="block Wrong"></div> <!--5A-->
+				<div class="block Wrong"></div> <!--5B-->
+				<div class="block Wrong"></div> <!--5C-->
+				<div class="block O"></div> <!--5D-->
+				<div class="block Wrong"></div> <!--5E-->
+				<div class="block Wrong"></div> <!--5F-->
+				<div class="number-block">5</div>
+				</div>
+			</div>
+	<!-- Конец шестого ряда -->
+
+	<!-- Седьмой ряд -->
+			<div class="row">
+				<div class="d-flex">
+				<div class="number-block">6</div>
+				<div class="block Wrong"></div> <!--6A-->
+				<div class="block Wrong"></div> <!--6B-->
+				<div class="block Wrong"></div> <!--6C-->
+				<div class="block Wrong"></div> <!--6D-->
+				<div class="block Wrong"></div> <!--6E-->
+				<div class="block Wrong"></div> <!--6F-->
+				<div class="number-block">6</div>
+				</div>
+			</div>
+	<!-- Конец седьмого ряда -->
+
+	<!-- Восьмой ряд -->
+			<div class="row">
+				<div class="d-flex">
+				<div class="number-block">7</div>
+				<div class="block Wrong"></div> <!--7A-->
+				<div class="block Wrong"></div> <!--7B-->
+				<div class="block I"></div> <!--7C-->
+				<div class="block Wrong"></div> <!--7D-->
+				<div class="block Wrong"></div> <!--7E-->
+				<div class="block Wrong"></div> <!--7F-->
+				<div class="number-block">7</div>
+				</div>
+			</div>
+	<!-- Конец восьмого ряда -->
+	</div>
+	<!-- Конец квадрата -->
+	<div class="score" style="position: absolute; top: 870px; left: 800px; font-size: 35px; font-family: Arial;">Попытки входа:<span class="attempt">2</span></div>
+	<script type="text/javascript">
+
+		let attempt = 2
+
+		let H = document.querySelector(".H")
+		let O = document.querySelector(".O")
+		let A = document.querySelector(".A")
+		let K = document.querySelector(".K")
+		let I = document.querySelector(".I")
+		let N = document.querySelector(".N")
+
+		let block = document.querySelectorAll(".block")
+		let Wrong = document.querySelectorAll(".Wrong")
+		let main = document.querySelector(".main")
+		let score = document.querySelector(".score")
+		let FProt = document.querySelector(".FirstProtocol")
+		let SProt = document.querySelector(".SecondProtocol")
+
+		alert("ОПАСНОСТЬ. НЕСАНКЦИОНИРОВАННЫЙ ДОСТУП.")
+		alert("ОЖИДАЮТСЯ ВЫПОЛНЕНИЯ ЖЁЛТЫХ ПРОВЕРОК, ПОЖАЛУЙСТА, ПРОЙДИТЕ ИХ");
+
+		for (let i=0; i<36; i=i+1){
+			Wrong[i].onclick = function() {
+				Wrong[i].style.backgroundImage = "url(Wrong.png)"
+				Wrong[i].style.backgroundSize = "100% 100%";
+				attempt = attempt - 1;
+				document.querySelector(".attempt").innerHTML = attempt;
+           		if (attempt == -1) {
+           			alert("ВХОД НЕ УДАЛСЯ. ПОЛЬЗОВАТЕЛЬ НЕ ОПОЗНАН. ВЫПОЛНЯЕТСЯ ПРОТОКОЛ БЛОКИРОВКИ.");
+           			main.style.display = "none"
+           			score.style.display = "none"
+           		}
+			}
+		}
+
+
+		H.onclick = function() {
+			H.style.backgroundImage = "url(H.png)";
+		}
+		O.onclick = function() {
+			O.style.backgroundImage = "url(O.png)";
+		}
+		A.onclick = function() {
+			A.style.backgroundImage = "url(A.png)";
+		}
+		K.onclick = function() {
+			K.style.backgroundImage = "url(K.png)";
+		}
+		I.onclick = function() {
+			I.style.backgroundImage = "url(I.png)";
+		}
+		N.onclick = function() {
+			N.style.backgroundImage = "url(N.png)";
+		}
+
+		function Name() {
+			let person = prompt("ПОЛЬЗОВАТЕЛЬ-УЧЁНЫЙ, ВВЕДИТЕ СВОЁ ДЕЙСТВИТЕЛЬНОЕ ИМЯ. НА АНГЛИЙСКОМ:");
+			  if (person == "Hoakin") {
+			    alert(`ПРОВЕРКА ЛИЧНОСТИ ВЫПОЛНЕНА.`);
+			    FProt.style.backgroundColor = "green";
+			    	if (SProt.style.backgroundColor == "green") {
+			    		alert("С ВОЗВРАЩЕНИЕМ В СИСТЕМУ");
+			    		for (var i=0; i<44; i=i+1) {
+			    			block[i].style.backgroundColor = "green";
+			    		}
+			    	}
+			  } 
+			  else  {
+			    alert(`ВНИМАНИЕ. НЕСАНКЦИОНИРОВАННАЯ ПОПЫТКА ВХОДА. ПОЛЬЗОВАТЕЛЬ НЕ ОПОЗНАН.`);
+			    attempt = attempt - 1;
+			    document.querySelector(".attempt").innerHTML = attempt;
+			        if (attempt == -1) {
+           			alert("ВХОД НЕ УДАЛСЯ. ПОЛЬЗОВАТЕЛЬ НЕ ОПОЗНАН. ВЫПОЛНЯЕТСЯ ПРОТОКОЛ БЛОКИРОВКИ.");
+           			main.style.display = "none"
+           			score.style.display = "none"
+           		}
+			  }
+		}
+
+		function DateOfBirth() {
+			let Date = prompt("ПОЛЬЗОВАТЕЛЬ-УЧЁНЫЙ, ВВЕДИТЕ СВОЙ ВОЗРАСТ НА ДАННЫЙ МОМЕНТ, ЧТОБЫ ПОДТВЕРДИТЬ ВАШУ ЛИЧНОСТЬ.");
+				if (Date == "44") {
+					alert("ПРОВЕРКА ВОЗРАСТА ВЫПОЛНЕНА.");
+					SProt.style.backgroundColor = "green";
+						if (FProt.style.backgroundColor == "green") {
+							alert("С ВОЗВРАЩЕНИЕМ В СИСТЕМУ");
+			    			for (var i=0; i<44; i=i+1) {
+			    				block[i].style.backgroundColor = "green";
+			    			}
+						}
+				}
+				else  {
+			    alert(`ВНИМАНИЕ. НЕСАНКЦИОНИРОВАННАЯ ПОПЫТКА ВХОДА. ПОЛЬЗОВАТЕЛЬ НЕ ОПОЗНАН.`);
+			    attempt = attempt - 1;
+			    document.querySelector(".attempt").innerHTML = attempt;
+			        if (attempt == -1) {
+           			alert("ВХОД НЕ УДАЛСЯ. ПОЛЬЗОВАТЕЛЬ НЕ ОПОЗНАН. ВЫПОЛНЯЕТСЯ ПРОТОКОЛ БЛОКИРОВКИ.");
+           			main.style.display = "none"
+           			score.style.display = "none"
+           		}
+			  }
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+.ryad {
+	margin-right: auto;
+	margin-left: auto;
+}
+.cube {
+	height: 100px;
+	width: 100px;
+	background-color: black;
+}
+.background {
+	background: url(background.png) no-repeat;
+	background-size: cover;
+}
+.main {
+	margin-top: 50px;
+	height: 800px;
+	width: 800px;
+	background-color: gray;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-box-shadow: -2px 3px 30px 5px rgba(34, 60, 80, 0.75);
+	-moz-box-shadow: -2px 3px 30px 5px rgba(34, 60, 80, 0.75);
+	box-shadow: -2px 3px 30px 5px rgba(34, 60, 80, 0.75);
+}	
+.row {
+	height: 100px;
+	width: 800px;
+	background-color: red;
+}
+.number-block {
+	height: 70px;
+	width: 100px;
+	text-align: center;
+	padding-top: 30px;
+	font-size: 30px;
+	font-family: Arial;
+	color: #98020B;
+	background-color: #313131;
+	border: black 4px solid;
+}
+.block {
+	height: 100px;
+	width: 100px;
+	border: black 4px solid;
+	background-color: #141414;
+}
+.d-flex {
+	display: flex;
+}
